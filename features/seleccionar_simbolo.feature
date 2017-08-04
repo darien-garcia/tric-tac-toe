@@ -18,6 +18,4 @@ Scenario: Jugador 2 selecciona la casilla 1 y ve simbolo O
 	And jugador en turno selecciono casilla "1"
 	Then debo ver simbolo "O" en casilla "1"
 
-Scenario: Debo poder ver identificador del jugador en turno
-	Given que comenzo el juego
-	Then debo ver simbolo "X" en casilla "1"
+
