@@ -13,17 +13,17 @@ class Juego
 
 		if vacia? eleccion
 			@tablero[eleccion] = @simbolos[@siguiente]
-		else
-			false
-		end
+			if @siguiente == :p1
+				@siguiente = :p2
+			else
+				@siguiente = :p1
+			end
 
-		if @siguiente == :p1
-			@siguiente = :p2
-		else
-			@siguiente = :p1
+			return true
 		end
-
-		return true
+			
+		false
+		
 	end
 	@private
 

@@ -37,4 +37,11 @@ describe Juego do
 		valido = juego.estadoCelda :a1
 		expect(valido) ==  '-'
 	end
+
+	it "jugador p2 selecciona la casilla :a1 que no esta vacia" do
+		juego = Juego.new
+		juego.jugada :a1
+		juego.jugada :a1
+		expect(juego.siguiente).to eq :p2
+	end
 end

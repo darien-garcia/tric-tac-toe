@@ -17,3 +17,15 @@ Scenario: Jugador 2 selecciona la casilla 1 y ve simbolo O
 	When jugador en turno selecciono casilla "1"
 	When jugador en turno selecciono casilla "1"
 	Then debo ver simbolo "O" en casilla "1"
+
+Scenario: Jugador 2 selecciona la casilla 2 y ve el simbolo 0
+	Given que comenzo el juego
+	When jugador en turno selecciono casilla "1"
+	When jugador en turno selecciono casilla "2"
+	Then debo ver simbolo "O" en casilla "2"
+
+Scenario: Jugador 2 no puede seleccionar la misma casilla que Jugador 1
+	Given que comenzo el juego
+	When jugador en turno selecciono casilla "1"
+	When jugador en turno selecciono casilla "1"
+	Then debo ver "siguiente jugador: p2"

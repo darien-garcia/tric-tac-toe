@@ -13,6 +13,10 @@
 			<input type="hidden" name="celda" value="a1">
 			<input type="submit" id="celda1" value="<%= session['simbolo'] %>">
 		</form>
+		<form method="post" action="/jugada">
+			<input type="hidden" name="celda" value="a2">
+			<input type="submit" id="celda2" value="<%= session['simbolo'] %>">
+		</form>
 	</div>
 
 	<h5>Disponibles: 9</h5>

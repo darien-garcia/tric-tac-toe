@@ -16,10 +16,10 @@ post '/jugada' do
 
 	if session['juego'].siguiente == :p1
 		session['simbolo'] = 'X'
-		session['juego'].jugada :a2
+		session['juego'].jugada params['celda'].to_sym
 	else
 		session['simbolo'] = 'O'
-		session['juego'].jugada :a1
+		session['juego'].jugada params['celda'].to_sym
 	end
 
 
