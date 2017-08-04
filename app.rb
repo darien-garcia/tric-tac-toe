@@ -25,3 +25,5 @@ post '/jugada' do
 
 	erb :jugar
 end
+
+
