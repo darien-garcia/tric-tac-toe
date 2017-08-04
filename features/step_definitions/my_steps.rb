@@ -15,9 +15,18 @@ Given(/^que comenzo el juego$/) do
   step "inicie la partida"
 end
 
-#Then(/^debo ver una casilla disponible$/) do 
-#	expect(page.should  have_selector("input[type=submit][value='_']")).to be(true)
-#end
+Given(/^que hay una partida iniciada$/) do
+  step 'que abri el juego'
+  step 'inicie la partida'
+end
+
+Given(/^que es turno del jugador "([^"]*)"$/) do |jugador|
+  expect(page.body).to match "siguiente jugador: #{jugador}"
+end
+
+Given(/^que el jugador en turno jugo$/) do
+  click_button('play')
+end
 
 
 
