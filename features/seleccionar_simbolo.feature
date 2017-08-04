@@ -11,5 +11,3 @@ Scenario: Debo poder seleccionar una casilla y ver mi simbolo en la celda selecc
 	Given que comenzo el juego
 	When jugador en turno selecciono casilla "1"
 	Then debo ver simbolo "X" en casilla "1"
-
-Scenario: Debo poder ver identificador del jugador en turno

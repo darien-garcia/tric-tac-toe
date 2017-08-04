@@ -25,4 +25,11 @@ describe Juego do
 		expect(valido) ==  true
 	end
 
+	it "jugador p1 selecciona la casilla :a1 y p2 la casilla :a1" do
+		juego = Juego.new
+		juego.jugada :a1
+		valido = juego.jugada :a1
+		expect(valido) ==  false
+	end
+
 end

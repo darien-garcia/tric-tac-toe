@@ -25,6 +25,7 @@ class Juego
 
 		return true
 	end
+	@private
 
 	def vacia? eleccion
 		return @tablero[eleccion].to_sym == :vacio
