@@ -7,12 +7,22 @@ get '/' do
 end
 
 get '/jugar' do
-	session["juego"]=Juego.new
+	session['juego'] = Juego.new
+	session['simbolo'] = '-'
 	erb :jugar
 end
 
 post '/jugada' do
-	session["juego"]
+
+	if session['juego'].siguiente == :p1
+		session['simbolo'] = 'X'
+		session['juego'].jugada :a2
+	else
+		session['simbolo'] = 'O'
+		session['juego'].jugada :a1
+	end
+
+
 	erb :jugar
 end
 
