@@ -1,8 +1,16 @@
 class Juego
-	def siguiente
-		:p1
+	def initialize 
+		@siguiente = :p1
+	end
+	def siguiente 
+		@siguiente
 	end
 
-	def jugada
+	def jugada 
+		if @siguiente == :p1
+			@siguiente = :p2
+		else
+			@siguiente = :p1
+		end
 	end
 end
