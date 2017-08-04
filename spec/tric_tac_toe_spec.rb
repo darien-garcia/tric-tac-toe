@@ -32,4 +32,9 @@ describe Juego do
 		expect(valido) ==  false
 	end
 
+	it "jugador p1 selecciona la casilla :a1" do
+		juego = Juego.new
+		valido = juego.estadoCelda :a1
+		expect(valido) ==  '-'
+	end
 end
