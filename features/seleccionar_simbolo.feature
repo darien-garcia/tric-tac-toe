@@ -29,3 +29,9 @@ Scenario: Jugador 2 no puede seleccionar la misma casilla que Jugador 1
 	When jugador en turno selecciono casilla "1"
 	When jugador en turno selecciono casilla "1"
 	Then debo ver "siguiente jugador: p2"
+	
+Scenario: Jugador 2 selecciona la casilla 8 y ve simbolo O
+	Given que comenzo el juego
+	When jugador en turno selecciono casilla "1"
+	When jugador en turno selecciono casilla "8"
+	Then debo ver simbolo "O" en casilla "8"
