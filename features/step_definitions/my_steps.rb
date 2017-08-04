@@ -33,8 +33,8 @@ Given(/^que es turno del jugador "([^"]*)"$/) do |jugador|
   expect(page.body).to match "siguiente jugador: #{jugador}"
 end
 
-Given(/^que el jugador en turno jugo$/) do
-  click_button('play')
+Given(/^que el jugador en turno jugo$/) do 
+  click_button('celda1')
 end
 
 
