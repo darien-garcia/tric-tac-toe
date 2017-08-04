@@ -8,8 +8,11 @@
 	<h2>"siguiente jugador: p1"</h2>
 
 	<div>
-		<form>
-			<input type="submit" id="celda1" value="X">
+		<form method="post" action="/jugada">
+			<input type="submit" id="celda1" value="<%= session['simbolo'] %>">
+		</form>
+		<form method="post" action="/jugada">
+			<input type="submit" id="celda2" value="<%= session['simbolo'] %>">
 		</form>
 	</div>
 
