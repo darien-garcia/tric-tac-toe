@@ -8,5 +8,8 @@ Scenario: Debe mostrar tablero con casillas disponibles
 	Then debo ver "Disponibles: 9"
 
 Scenario: Debo poder seleccionar una casilla y ver mi simbolo en la celda seleccionada
+	Given que comenzo el juego
+	When jugador en turno selecciono casilla "1"
+	Then debo ver simbolo "X" en casilla "1"
 
 Scenario: Debo poder ver identificador del jugador en turno
