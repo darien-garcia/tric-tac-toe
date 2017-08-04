@@ -10,8 +10,8 @@ Scenario: es turno del jugador "p2"
 	Then debo ver "siguiente jugador: p2"
 
 Scenario: es turno del jugador "p1"
-	Given comenzo el juego
+	Given que comenzo el juego
 	When jugador en turno selecciono casilla "1"
-	When jugador en turno selecciono casilla "2"
+	When jugador en turno selecciono casilla "1"
 	Then debo ver "siguiente jugador: p1"
 

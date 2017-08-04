@@ -12,4 +12,8 @@ Scenario: Jugador 1 selecciona la casilla 1 y ve simbolo X
 	When jugador en turno selecciono casilla "1"
 	Then debo ver simbolo "X" en casilla "1"
 
-
+Scenario: Jugador 2 selecciona la casilla 1 y ve simbolo O
+	Given que comenzo el juego
+	When jugador en turno selecciono casilla "1"
+	When jugador en turno selecciono casilla "1"
+	Then debo ver simbolo "O" en casilla "1"
