@@ -8,3 +8,7 @@ end
 get '/jugar' do
 	erb :jugar
 end
+
+post '/jugada' do
+	erb :jugar
+end
